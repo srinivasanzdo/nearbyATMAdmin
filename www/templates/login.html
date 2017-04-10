@@ -1,0 +1,43 @@
+<ion-view view-title="Login">
+  <!--<ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>-->
+  <ion-content>
+    <form name="loginForm" class="login-form" novalidate>
+      <div class="list">
+        <center>
+          <img src="img/icon.png" style="height:150px; width:150px;"/>
+        </center>
+        <br/>
+        <label class="item item-input no-border">
+           <span class="input-label">Bank Name</span>
+          <select name="bank" ng-options="list as list.bankname for list in bankList track by list.bankid" ng-model="bankdetails" required>
+          </select>
+        </label>
+        <div class="form-data">
+          <label class="item item-input no-border">
+            <span class="input-label">Username</span>
+            <input name="user" type="text" class="border" ng-model="loginData.username" required>
+          </label>
+          <span style="color:red;padding: 0 16px;" ng-show="loginForm.user.$dirty && loginForm.user.$invalid">
+            <span ng-show="loginForm.user.$error.required">Username is required.</span>
+          </span>
+          <label class="item item-input no-border">
+            <span class="input-label">Password</span>
+            <input name="password" type="password" class="border" ng-model="loginData.password" required>
+          </label>
+          <span style="color:red;padding: 0 16px;" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+            <span ng-show="loginForm.password.$error.required">Password is required.</span>
+          </span>
+          <label class="item no-border">
+            <button class="button button-block button-positive" ng-disabled="loginForm.user.$invalid ||  
+loginForm.password.$invalid || !loginForm.bank.$dirty" type="button" ng-click="doLogin(loginData, bankdetails)">Log in</button>
+          </label>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

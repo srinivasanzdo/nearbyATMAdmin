@@ -1,0 +1,25 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div style="padding-top: 40px;">
+    <center><h1>{{bankDetails.bankname}}</h1></center>
+    </div>
+    </br/>
+    <div style="padding-top: 40px;">
+    <center><h3>Current Balance</h3></center>
+    <br/>
+    <center>
+      <div style="height: 100px;width:300px;border: 1px solid #000;padding-top:25px;">
+      <h1>&#x20B9; &nbsp; {{bankDetails.amount}}</h1>
+      </div>
+      </center>
+    </div>
+    </br></br>
+    <div>
+      <center>
+        <button class="btn" style="background: #b800e6;" ng-click="gotodeposit()">Deposit</button> &nbsp; &nbsp;
+        <button class="btn" style="background: #009900" ng-click="gotowithdraw()">Withdraw</button> &nbsp; &nbsp;
+        <button class="btn" style="background: #b38600;" ng-click="gotolist()">Transaction List</button> &nbsp; &nbsp;
+      </center>
+    </div>
+  </ion-content>
+</ion-view>

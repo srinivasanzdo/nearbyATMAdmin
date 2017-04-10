@@ -1,0 +1,18 @@
+<ion-view view-title="Transactions">
+  <ion-content>
+    <div style="padding-top: 50px;">
+      <div class="row header">
+        <div class="col">Transaction ID</div>
+        <div class="col">Mode</div>
+        <div class="col">Amount</div>
+        <div class="col">Date</div>
+      </div>
+      <div class="row" ng-repeat="data in transactionDetails">
+        <div class="col">{{data.transactionid}}</div>
+        <div class="col">{{data.mode}}</div>
+        <div class="col">{{data.amount}}</div>
+        <div class="col">{{data.transactiondate}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
